@@ -53,7 +53,7 @@ describe String do
     let(:favorite_food) { String.new('pizza') }
     it 'updates the favorite food' do
       # Write a test that will pass.
-      expect(favorite_food). to eql('pizza')
+      expect(favorite_food).to eql('pizza')
     end
   end
 end
