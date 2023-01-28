@@ -92,14 +92,14 @@ describe MagicSeven do
   # The following tests will need you to create new instances of MagicSeven with
   # a specific value for the random_number.
 
-  subject(:game) { described_class.new(13) }
-
   describe '#subtract_random_number' do
-    context 'when the random number is 13' do
-      it 'returns something random' do
+    context 'when the previous result is 13 and the random number is 4' do
+      subject(:game) { described_class.new(4) }
+
+      it 'returns 9' do
         previous_step = 13
         result = game.subtract_random_number(previous_step)
-        expect(result).to eq(result)
+        expect(result).to eq(9)
       end
     end
   end
@@ -112,7 +112,7 @@ describe MagicSeven do
     context 'when the random number is 3' do
       # remove the 'x' before running this test
       it 'will return 7' do
-        random_number = 3
+        # random_number = 3
         result = game.play
         expect(result).to eq(7)
       end
@@ -122,7 +122,7 @@ describe MagicSeven do
       subject(:game) { described_class.new(7) }
       # remove the 'x' before running this test
       it 'will return 7' do
-        random_number = 7
+        # random_number = 7
         result = game.play
         expect(result).to eq(7)
       end
@@ -132,7 +132,7 @@ describe MagicSeven do
       subject(:game) { described_class.new(120) }
       # remove the 'x' before running this test
       it 'will return 7' do
-        random_number = 7
+        # random_number = 120
         result = game.play
         expect(result).to eq(7)
       end
